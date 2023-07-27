@@ -1,0 +1,4 @@
+
+New Tileset - Browse - grab your image with all your Tileset
+    Make sure the tile width and tile height on the tileset is equal to the tile width and tile height of your map (in upper left corner)
+    
