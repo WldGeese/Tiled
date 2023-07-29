@@ -2,3 +2,44 @@
 New Tileset - Browse - grab your image with all your Tileset
     Make sure the tile width and tile height on the tileset is equal to the tile width and tile height of your map (in upper left corner)
     
+Random Mode (D)
+    Select multiple tiles from your tileset and click Random Mode (D)
+        Now as you draw it will pull randomly from your selection
+        To change the probability items in random mode, go to the tab with the tileset on it, click on specific item(s)
+        and change the probability in the top left
+
+Objects
+    These are things you can place on the map, can be any size, and you can place them wherever you want
+        Not bound by tilesize
+    Import by clicking on New Tileset in the bottom right and changing the Type to collection of images and naming it
+        This will create a new tab and you can drag imagines into the tab
+            The objects will all look like they are the same size but they're not necessarily
+    Create an Object layer
+    Use the Insert Tile (T) button and then you can place objects
+    Double click on objects to be able to rotate or resize
+    In the Objects tab in upper right you can select individual objects that way and rename, set class (aka type), and see stats
+    Use Select Objects (S) to select individual objects, or click drag to select multiple
+    **Once you change the name of an object you'll see this relfected over it's head and also in the tab on the right
+    You can go to View and hide the names from the actual map, or only show selected
+
+Shapes
+    Next to Insert Object you can also insert points, polygons, ellipses, etc
+        You can't really import these into your code since they don't have rects, but you can instead import their geometry, so their x,y, etc
+            * This can be really useful for checking to see if the player enters a certain area, etc
+
+Text
+    You can add text to the screen but hard to import into pygame, so similar story to Shapes
+
+Terrains
+    Special tiles that react to their surroundings (in 3 different ways):
+        1. Corners
+            Check the corners
+            If a tile's corners borders certain things, then it connects this tile and the tile next to it
+        2. Edges
+            Check the Edges
+            If the tile's right edge borders a tile with the same thing on its left edge, then it connects the two tiles
+        3. Corners + Edges
+            Checks corners and edges
+            So if bottom right corner, right edge, and top right corner all match the corresponding left corners and left edge of next tile, then the two tiles are linked
+                This is the most complex and takes forever
+                    42.44 mark
