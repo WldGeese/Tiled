@@ -165,7 +165,7 @@
   <object id="14" name="Tree" type="Vegetation" gid="305" x="3060" y="1448" width="256" height="256"/>
   <object id="15" name="Tower" type="Building" gid="304" x="1666" y="1214.91" width="384" height="384"/>
   <object id="16" name="Tower" type="Building" gid="304" x="2368" y="780" width="384" height="384"/>
-  <object id="17" name="Rectangle" type="Shape" x="73.4545" y="282.061" width="1200" height="364"/>
+  <object id="17" name="Rectangle" type="Shape" x="5.4545" y="1218.06" width="1200" height="364"/>
   <object id="18" name="Marker" type="Shape" x="1552" y="316">
    <point/>
   </object>
@@ -190,7 +190,7 @@
   <object id="26" name="Text" type="Text" x="1449.87" y="1214.23" width="400" height="400">
    <text pixelsize="69" wrap="1">My awesome level map</text>
   </object>
-  <object id="41" name="Castle" type="Building" gid="300" x="-24" y="656" width="768" height="768"/>
+  <object id="41" name="Castle" type="Building" gid="300" x="232" y="928" width="768" height="768"/>
   <object id="42" name="Tower" type="Building" gid="304" x="728" y="372" width="384" height="384"/>
   <object id="43" name="Mushroom" type="Vegetation" gid="302" x="676" y="456" width="64" height="64"/>
   <object id="44" name="Marker" type="Shape" x="368" y="336">
