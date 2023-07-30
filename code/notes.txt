@@ -43,3 +43,64 @@ Terrains
             So if bottom right corner, right edge, and top right corner all match the corresponding left corners and left edge of next tile, then the two tiles are linked
                 This is the most complex and takes forever
                     42.44 mark
+
+Creating Terrains
+    Open tab for the tileset you're working with
+    Click the terrain set icon at top of screen (looks like map of beach)
+        This will pop up a new section on the right of the screen
+        Click the blue plus sign under that section and then check which kind of set you want to make (corner, edge, mix)
+            Rename the terrain set in the upper right
+                Then name the red triangle underneath that
+        
+    Assuming you chose edge, now click on the red thing, and then click tiles on every edge where you want to check for connection
+
+    If you've got multiple different times of art connections on your tiles, you may need to create two terrains, meaning two red triangle thingies
+
+
+Using Terrains
+    Now back on the map, you'll see a tab in bottom right for terrain sets
+        Make sure you consider creating a new layer or be conscious of what layer you want this terrain on
+        With that terrain brush selected (the beach map looking one), you can now paint on those objects without 
+        selecting tiles individually and it will dynamically render what it's supposed to look like
+    * If you have two terrain chunks that connect the exact same but look different, Tiled will randomly choose one of 
+    them each time the requirements are multiple
+        So if you're using edges and you've got a rounded circle and a small square that both meet the 
+        adjacent tiles in the same places, it'll go between the two randomly
+            You can also modify the probability of those two tiles like we did before to influence how often each is placed
+
+    ** If you're working with multiple terrain connections in a terrain set, you may need to place seed tiles so that Tiled
+    knows what to start with
+        Make sure you choose the seed tiles from the terrain set itself
+
+    If you click on the Patterns tab on the Terrain, you can see all the patterns that Tiled needs you to specify in order to
+    have a complete set. The ones you have not specified yet will be highlighted, used ones will be faded
+
+
+Exporting from Tiled to pygame (if you're trying to change the file type. If not, think you can just use the tmx file you already have)
+    On map, File/Export As
+        Consider making a folder called Export in your game directory to save these things
+        Save as Tiled map file (*.tmx)
+
+    You could instead Export as Image to export the entire map as an image
+        Could do that for the floor if you've just got one floor for the whole game, but could also use tmx data
+
+Isometric Tiles (1:11 mark)
+    Will have to choose an Isometric Orientation when you create new map
+
+Importing Tiled into pygame
+    2 ways:
+        1. Manually using csv/json data (not recommended)
+        2. Use pytmx
+            *"from pytmx.util_pygame import load_pygame"
+
+Basic idea of how he recommends using this in pygame:
+    Create a Tile sprite class that takes an x,y,surf,group
+    Create a sprite group
+    Iterate through the tile layers of the map, get the x,y,surf for each tile and use that to create an instance of your Tile class
+        Remember to multiple the x and y by the cell width and height, respectively
+    When you call your sprite class.draw(screen), you should then see the map
+
+    
+
+
+
